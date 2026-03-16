@@ -1,0 +1,491 @@
+export type CommodityType = 'corn' | 'seaweed' | 'moringa' | 'cocoa' | 'coffee' | 'cassava';
+
+export interface ProductIdea {
+  id: number;
+  name: string;
+  targetMarket: string;
+  margin: number;
+  productionCost: string;
+  sellingPrice: string;
+  breakeven: string;
+  riskLevel: string;
+  complexity: string;
+  equipment: string[];
+  packaging: string;
+  description: string;
+  reasoning: string;
+}
+
+export const productsByCommodity: Record<CommodityType, ProductIdea[]> = {
+  corn: [
+    {
+      id: 1,
+      name: "Premium Roasted Corn Snack",
+      targetMarket: "Urban Retail & Supermarkets",
+      margin: 68,
+      productionCost: "Rp 15,000/kg",
+      sellingPrice: "Rp 45,000/kg",
+      breakeven: "3 months",
+      riskLevel: "Low",
+      complexity: "Medium",
+      equipment: ["Roasting machine", "Packaging sealer", "Grinder"],
+      packaging: "200g premium foil pouches with transparent window",
+      description: "Artisanal roasted corn with sea salt and herbs, targeting health-conscious urban consumers. Premium positioning with organic certification.",
+      reasoning: "High margin opportunity due to growing snack market and organic trend. Your corn quality matches premium segment requirements."
+    },
+    {
+      id: 2,
+      name: "Organic Corn Flour (Fine Grade)",
+      targetMarket: "Food Processors & Bakeries",
+      margin: 52,
+      productionCost: "Rp 8,500/kg",
+      sellingPrice: "Rp 17,500/kg",
+      breakeven: "2 months",
+      riskLevel: "Low",
+      complexity: "Low",
+      equipment: ["Industrial grinder", "Sieve machine", "Bulk packaging"],
+      packaging: "5kg & 25kg food-grade paper bags with moisture barrier",
+      description: "High-quality corn flour for bakeries and food manufacturers. Consistent particle size and organic certification for B2B sales.",
+      reasoning: "Stable demand from food industry. Lower risk due to bulk B2B contracts and simpler production process."
+    },
+    {
+      id: 3,
+      name: "Gourmet Corn Oil (Cold-Pressed)",
+      targetMarket: "Premium Wellness Stores",
+      margin: 85,
+      productionCost: "Rp 25,000/kg",
+      sellingPrice: "Rp 165,000/liter",
+      breakeven: "5 months",
+      riskLevel: "Medium",
+      complexity: "High",
+      equipment: ["Cold-press extractor", "Filtration system", "Glass bottling line"],
+      packaging: "250ml dark glass bottles with premium labels",
+      description: "Artisanal cold-pressed corn oil rich in antioxidants. Marketed as gourmet cooking oil for health-conscious consumers.",
+      reasoning: "Highest margin but requires significant equipment investment. Growing premium oil segment shows 45% YoY growth."
+    },
+    {
+      id: 4,
+      name: "Organic Corn Tea Blend",
+      targetMarket: "Health Food Cafes & Online",
+      margin: 72,
+      productionCost: "Rp 12,000/100g",
+      sellingPrice: "Rp 42,000/100g",
+      breakeven: "4 months",
+      riskLevel: "Medium",
+      complexity: "Medium",
+      equipment: ["Roaster", "Blender", "Tea bag machine"],
+      packaging: "Premium tea tins & biodegradable tea bags",
+      description: "Roasted corn tea with herbal blend. Natural sweetness, caffeine-free. Targets wellness and lifestyle market.",
+      reasoning: "Emerging trend in herbal teas. Lower competition in corn-based beverages. High perceived value."
+    },
+    {
+      id: 5,
+      name: "Ready-to-Eat Corn Porridge Mix",
+      targetMarket: "Mass Market Retail",
+      margin: 58,
+      productionCost: "Rp 6,500/pack",
+      sellingPrice: "Rp 15,500/pack",
+      breakeven: "3 months",
+      riskLevel: "Low",
+      complexity: "Low",
+      equipment: ["Dryer", "Mixer", "Sachet packaging"],
+      packaging: "Individual sachets in box packaging (5 sachets/box)",
+      description: "Instant corn porridge with traditional spices. Just add hot water. Convenience product for busy consumers.",
+      reasoning: "Large market opportunity in instant food segment. Simple production. Strong cultural appeal."
+    }
+  ],
+  seaweed: [
+    {
+      id: 1,
+      name: "Premium Seaweed Chips",
+      targetMarket: "Health Food Stores & Online",
+      margin: 75,
+      productionCost: "Rp 18,000/100g",
+      sellingPrice: "Rp 72,000/100g",
+      breakeven: "4 months",
+      riskLevel: "Low",
+      complexity: "Medium",
+      equipment: ["Dehydrator", "Seasoning mixer", "Vacuum sealer"],
+      packaging: "Resealable foil pouches with nitrogen flush",
+      description: "Crispy roasted seaweed chips with natural sea salt. Low-calorie, high-protein snack for health-conscious consumers.",
+      reasoning: "Growing demand for healthy snacks. Seaweed's superfood status drives premium pricing. Low competition in local market."
+    },
+    {
+      id: 2,
+      name: "Organic Seaweed Extract Powder",
+      targetMarket: "Cosmetics & Wellness Industry",
+      margin: 82,
+      productionCost: "Rp 35,000/kg",
+      sellingPrice: "Rp 195,000/kg",
+      breakeven: "5 months",
+      riskLevel: "Medium",
+      complexity: "High",
+      equipment: ["Extraction system", "Spray dryer", "Laboratory testing"],
+      packaging: "Sealed aluminum bags with desiccant",
+      description: "High-purity seaweed extract for cosmetic formulations. Rich in minerals and antioxidants for skincare products.",
+      reasoning: "B2B opportunity in growing natural cosmetics sector. High margins justify equipment investment. Long-term contracts possible."
+    },
+    {
+      id: 3,
+      name: "Seaweed Jelly Dessert Mix",
+      targetMarket: "Retail & Food Service",
+      margin: 68,
+      productionCost: "Rp 8,500/pack",
+      sellingPrice: "Rp 28,000/pack",
+      breakeven: "3 months",
+      riskLevel: "Low",
+      complexity: "Low",
+      equipment: ["Grinder", "Mixer", "Packaging machine"],
+      packaging: "Box packaging with individual sachets",
+      description: "Traditional agar-agar jelly mix from seaweed. Various flavors, instant preparation, healthy dessert alternative.",
+      reasoning: "Culturally familiar product with modern twist. Simple production process. Strong demand in Southeast Asian markets."
+    },
+    {
+      id: 4,
+      name: "Dried Seaweed Seasoning Flakes",
+      targetMarket: "Restaurants & Retail",
+      margin: 70,
+      productionCost: "Rp 12,000/100g",
+      sellingPrice: "Rp 40,000/100g",
+      breakeven: "3 months",
+      riskLevel: "Low",
+      complexity: "Low",
+      equipment: ["Dryer", "Grinder", "Packaging sealer"],
+      packaging: "Glass jars or premium shakers",
+      description: "Gourmet seasoning from dried seaweed. Umami flavor enhancer for cooking. Natural MSG alternative.",
+      reasoning: "Growing trend toward natural seasonings. Restaurant market provides stable B2B channel. High repeat purchase rate."
+    },
+    {
+      id: 5,
+      name: "Seaweed Face Mask Sheets",
+      targetMarket: "Beauty & Wellness Stores",
+      margin: 78,
+      productionCost: "Rp 5,000/sheet",
+      sellingPrice: "Rp 23,000/sheet",
+      breakeven: "4 months",
+      riskLevel: "Medium",
+      complexity: "Medium",
+      equipment: ["Extraction system", "Sheet cutting machine", "Sterile packaging"],
+      packaging: "Individual foil sachets with branded box",
+      description: "Natural seaweed essence face masks. Hydrating and mineral-rich for glowing skin. Beauty trend product.",
+      reasoning: "Booming K-beauty trend in Indonesia. High perceived value. Strong margins on beauty products. Social media marketing potential."
+    }
+  ],
+  moringa: [
+    {
+      id: 1,
+      name: "Premium Moringa Tea Blend",
+      targetMarket: "Health Food Cafes & Wellness Stores",
+      margin: 85,
+      productionCost: "Rp 15,000/100g",
+      sellingPrice: "Rp 98,000/100g",
+      breakeven: "4 months",
+      riskLevel: "Low",
+      complexity: "Medium",
+      equipment: ["Dryer", "Grinder", "Tea bag machine"],
+      packaging: "Premium tins or biodegradable tea bags",
+      description: "Artisan moringa leaf tea with herbal blend. Superfood positioning for wellness market. Organic certified.",
+      reasoning: "Moringa's superfood status commands premium pricing. Growing wellness trend. Low production complexity with high margins."
+    },
+    {
+      id: 2,
+      name: "Moringa Powder Supplement",
+      targetMarket: "Online Wellness & Fitness Market",
+      margin: 72,
+      productionCost: "Rp 25,000/250g",
+      sellingPrice: "Rp 89,000/250g",
+      breakeven: "3 months",
+      riskLevel: "Low",
+      complexity: "Low",
+      equipment: ["Industrial dryer", "Fine grinder", "Sieve system"],
+      packaging: "Resealable pouches or bottles",
+      description: "Pure moringa leaf powder. High nutrient density for smoothies and supplements. Vegan protein source.",
+      reasoning: "Direct-to-consumer online model. High demand from fitness community. Simple production with stable pricing."
+    },
+    {
+      id: 3,
+      name: "Moringa Energy Bars",
+      targetMarket: "Fitness Centers & Retail",
+      margin: 68,
+      productionCost: "Rp 8,000/bar",
+      sellingPrice: "Rp 25,000/bar",
+      breakeven: "5 months",
+      riskLevel: "Medium",
+      complexity: "Medium",
+      equipment: ["Mixer", "Molding machine", "Wrapper"],
+      packaging: "Individual flow wrap with branded box",
+      description: "Natural energy bars with moringa, nuts, and dried fruits. Healthy snack for active lifestyles.",
+      reasoning: "Growing health snack market. Moringa adds unique selling point. Gym partnerships possible for distribution."
+    },
+    {
+      id: 4,
+      name: "Moringa Skincare Oil",
+      targetMarket: "Premium Beauty & Spa",
+      margin: 88,
+      productionCost: "Rp 45,000/50ml",
+      sellingPrice: "Rp 385,000/50ml",
+      breakeven: "6 months",
+      riskLevel: "Medium",
+      complexity: "High",
+      equipment: ["Cold-press extractor", "Filtration", "Bottling line"],
+      packaging: "Dark glass bottles with dropper",
+      description: "Pure moringa seed oil for face and hair. Anti-aging properties. Natural luxury skincare product.",
+      reasoning: "Highest margin opportunity. Natural beauty trend. Spa partnerships for premium positioning. Export potential."
+    },
+    {
+      id: 5,
+      name: "Instant Moringa Latte Mix",
+      targetMarket: "Cafes & Health Stores",
+      margin: 65,
+      productionCost: "Rp 6,500/sachet",
+      sellingPrice: "Rp 18,500/sachet",
+      breakeven: "3 months",
+      riskLevel: "Low",
+      complexity: "Low",
+      equipment: ["Mixer", "Sachet packaging machine"],
+      packaging: "Box with individual sachets (10 sachets/box)",
+      description: "Instant moringa latte with coconut milk powder. Just add hot water. Trendy cafe-style drink at home.",
+      reasoning: "Riding matcha latte trend with local ingredient. Convenience factor. Strong cafe culture adoption potential."
+    }
+  ],
+  cocoa: [
+    {
+      id: 1,
+      name: "Artisan Single-Origin Chocolate Bars",
+      targetMarket: "Premium Gourmet & Export",
+      margin: 78,
+      productionCost: "Rp 35,000/100g",
+      sellingPrice: "Rp 158,000/100g",
+      breakeven: "6 months",
+      riskLevel: "Medium",
+      complexity: "High",
+      equipment: ["Roaster", "Grinder", "Tempering machine", "Molding"],
+      packaging: "Premium foil wrap with artisan paper sleeve",
+      description: "Bean-to-bar chocolate highlighting local cocoa terroir. Dark chocolate 70-85%. Single estate production.",
+      reasoning: "Growing craft chocolate market. Premium positioning justifies high margins. Export potential to specialty markets."
+    },
+    {
+      id: 2,
+      name: "Raw Cocoa Powder (Premium Grade)",
+      targetMarket: "Bakeries & Food Service",
+      margin: 62,
+      productionCost: "Rp 45,000/kg",
+      sellingPrice: "Rp 118,000/kg",
+      breakeven: "4 months",
+      riskLevel: "Low",
+      complexity: "Medium",
+      equipment: ["Fermentation tanks", "Roaster", "Press", "Grinder"],
+      packaging: "5kg food-grade bags for B2B",
+      description: "High-quality cocoa powder for professional baking. Rich flavor profile. Consistent quality for bulk orders.",
+      reasoning: "Stable B2B demand from bakery industry. Lower marketing costs. Recurring orders with long-term contracts."
+    },
+    {
+      id: 3,
+      name: "Cocoa Nibs Superfood Snack",
+      targetMarket: "Health Food Stores & Online",
+      margin: 72,
+      productionCost: "Rp 28,000/250g",
+      sellingPrice: "Rp 98,000/250g",
+      breakeven: "4 months",
+      riskLevel: "Low",
+      complexity: "Low",
+      equipment: ["Roaster", "Winnower", "Packaging"],
+      packaging: "Resealable pouches with clear window",
+      description: "Roasted cocoa nibs. Natural superfood high in antioxidants. For smoothie bowls and healthy snacking.",
+      reasoning: "Superfood trend drives demand. Simple production process. Strong online sales potential. Repeat purchase behavior."
+    },
+    {
+      id: 4,
+      name: "Cocoa Butter (Cosmetic Grade)",
+      targetMarket: "Cosmetics Industry & Spas",
+      margin: 82,
+      productionCost: "Rp 55,000/kg",
+      sellingPrice: "Rp 302,000/kg",
+      breakeven: "5 months",
+      riskLevel: "Medium",
+      complexity: "High",
+      equipment: ["Hydraulic press", "Filtration system", "Deodorizer"],
+      packaging: "Sealed containers with quality certification",
+      description: "Pure cocoa butter for cosmetic formulations. Natural moisturizer. Pharmaceutical and spa-grade quality.",
+      reasoning: "High-value B2B market. Growing natural cosmetics sector. Long shelf life. Premium margins justify equipment."
+    },
+    {
+      id: 5,
+      name: "Hot Cocoa Drink Mix (Premium)",
+      targetMarket: "Retail & Cafes",
+      margin: 58,
+      productionCost: "Rp 12,000/sachet",
+      sellingPrice: "Rp 28,500/sachet",
+      breakeven: "3 months",
+      riskLevel: "Low",
+      complexity: "Low",
+      equipment: ["Mixer", "Sachet packaging machine"],
+      packaging: "Box with individual sachets (10 sachets/box)",
+      description: "Premium hot chocolate mix with real cocoa. Rich and creamy. Cafe-quality at home convenience.",
+      reasoning: "Mass market appeal with premium positioning. Simple production. Strong retail distribution potential."
+    }
+  ],
+  coffee: [
+    {
+      id: 1,
+      name: "Single-Origin Specialty Coffee (Whole Bean)",
+      targetMarket: "Specialty Cafes & Export",
+      margin: 75,
+      productionCost: "Rp 65,000/kg",
+      sellingPrice: "Rp 258,000/kg",
+      breakeven: "5 months",
+      riskLevel: "Medium",
+      complexity: "Medium",
+      equipment: ["Washing station", "Hulling machine", "Grading equipment", "Packaging"],
+      packaging: "Valve-sealed bags with origin story",
+      description: "Premium washed process coffee. Unique flavor notes from volcanic soil. SCA scoring 85+. Traceable single estate.",
+      reasoning: "Third-wave coffee trend. High margins in specialty segment. Export potential to Japan, Korea, Australia. Story-driven marketing."
+    },
+    {
+      id: 2,
+      name: "Cold Brew Coffee Concentrate",
+      targetMarket: "Retail & Food Service",
+      margin: 68,
+      productionCost: "Rp 28,000/liter",
+      sellingPrice: "Rp 88,000/liter",
+      breakeven: "4 months",
+      riskLevel: "Low",
+      complexity: "Low",
+      equipment: ["Cold brew system", "Filtration", "Bottling line"],
+      packaging: "Glass bottles with tamper-evident seal",
+      description: "Ready-to-drink cold brew concentrate. Just add water or milk. Smooth, low-acid coffee. 2-week shelf life refrigerated.",
+      reasoning: "Growing RTD coffee market in Indonesia. Convenience trend. Cafe partnerships for wholesale. Premium positioning possible."
+    },
+    {
+      id: 3,
+      name: "Coffee Cascara Tea",
+      targetMarket: "Specialty Tea & Coffee Shops",
+      margin: 85,
+      productionCost: "Rp 12,000/100g",
+      sellingPrice: "Rp 78,000/100g",
+      breakeven: "3 months",
+      riskLevel: "Low",
+      complexity: "Low",
+      equipment: ["Dryer", "Sorter", "Packaging sealer"],
+      packaging: "Kraft bags with clear window",
+      description: "Dried coffee cherry husks. Fruity tea with caffeine. Zero-waste product from coffee processing. Unique flavor profile.",
+      reasoning: "Trendy new product category. Utilizes waste stream = high margin. Specialty coffee shops love sustainability story."
+    },
+    {
+      id: 4,
+      name: "Coffee Flour (Gluten-Free)",
+      targetMarket: "Health Food & Bakeries",
+      margin: 72,
+      productionCost: "Rp 18,000/kg",
+      sellingPrice: "Rp 65,000/kg",
+      breakeven: "4 months",
+      riskLevel: "Medium",
+      complexity: "Medium",
+      equipment: ["Dryer", "Grinder", "Sieve", "Packaging"],
+      packaging: "Resealable bags with recipe cards",
+      description: "Gluten-free flour from coffee cherry pulp. High fiber and protein. For baking and smoothies. Sustainable upcycled ingredient.",
+      reasoning: "Innovative circular economy product. Growing gluten-free market. Unique selling proposition. B2B and retail potential."
+    },
+    {
+      id: 5,
+      name: "Premium Instant Coffee (Spray-Dried)",
+      targetMarket: "Mass Retail & Online",
+      margin: 55,
+      productionCost: "Rp 45,000/kg",
+      sellingPrice: "Rp 98,000/kg",
+      breakeven: "6 months",
+      riskLevel: "Medium",
+      complexity: "High",
+      equipment: ["Extraction system", "Spray dryer", "Packaging line"],
+      packaging: "Jars or sachets with premium branding",
+      description: "High-quality instant coffee from arabica beans. Better taste than commodity instant. Convenience without compromise.",
+      reasoning: "Large instant coffee market in Indonesia. Premium segment growing. Opportunity to compete with international brands locally."
+    }
+  ],
+  cassava: [
+    {
+      id: 1,
+      name: "Premium Cassava Chips (Gourmet Flavors)",
+      targetMarket: "Urban Retail & Online",
+      margin: 65,
+      productionCost: "Rp 18,000/kg",
+      sellingPrice: "Rp 52,000/kg",
+      breakeven: "3 months",
+      riskLevel: "Low",
+      complexity: "Low",
+      equipment: ["Slicer", "Fryer", "Seasoning tumbler", "Packaging"],
+      packaging: "Premium foil bags with nitrogen flush",
+      description: "Artisan cassava chips in gourmet flavors (truffle, wasabi, rendang). Healthier alternative to potato chips. Gluten-free snack.",
+      reasoning: "Growing healthy snack market. Cassava cheaper than imported potatoes. Premium flavors justify higher margins. Strong retail demand."
+    },
+    {
+      id: 2,
+      name: "Cassava Flour (Gluten-Free Premium)",
+      targetMarket: "Health Food Stores & Bakeries",
+      margin: 58,
+      productionCost: "Rp 12,000/kg",
+      sellingPrice: "Rp 28,500/kg",
+      breakeven: "3 months",
+      riskLevel: "Low",
+      complexity: "Low",
+      equipment: ["Peeler", "Grater", "Dryer", "Grinder", "Packaging"],
+      packaging: "1kg and 5kg paper bags",
+      description: "Fine cassava flour for gluten-free baking. Neutral taste, versatile use. Certified gluten-free for celiac market.",
+      reasoning: "Rapidly growing gluten-free market. Health trend driver. Both B2B bakery and retail consumer channels. Export potential."
+    },
+    {
+      id: 3,
+      name: "Frozen Cassava Fries (Restaurant Grade)",
+      targetMarket: "Restaurants & Food Service",
+      margin: 52,
+      productionCost: "Rp 15,000/kg",
+      sellingPrice: "Rp 32,000/kg",
+      breakeven: "5 months",
+      riskLevel: "Medium",
+      complexity: "Medium",
+      equipment: ["Cutter", "Blancher", "Freezer", "Packaging"],
+      packaging: "Bulk frozen bags for food service",
+      description: "Pre-cut frozen cassava fries ready for deep-frying. Crispy exterior, creamy interior. Restaurant-ready convenience product.",
+      reasoning: "Growing food service demand for local alternatives. Lower cost than imported fries. Contracts with restaurant chains possible."
+    },
+    {
+      id: 4,
+      name: "Cassava Starch (Modified)",
+      targetMarket: "Food Industry & Manufacturing",
+      margin: 48,
+      productionCost: "Rp 8,500/kg",
+      sellingPrice: "Rp 16,500/kg",
+      breakeven: "4 months",
+      riskLevel: "Low",
+      complexity: "Medium",
+      equipment: ["Grater", "Separator", "Dryer", "Sieve"],
+      packaging: "25kg bulk bags for B2B",
+      description: "High-quality modified cassava starch for food processing. Thickener and stabilizer. Industrial applications in noodles, bakery.",
+      reasoning: "Stable B2B demand from food manufacturers. High volume, lower margin but reliable. Long-term contracts minimize risk."
+    },
+    {
+      id: 5,
+      name: "Cassava Tape (Fermented Dessert)",
+      targetMarket: "Retail & Traditional Markets",
+      margin: 72,
+      productionCost: "Rp 8,000/pack",
+      sellingPrice: "Rp 28,000/pack",
+      breakeven: "2 months",
+      riskLevel: "Low",
+      complexity: "Low",
+      equipment: ["Steamer", "Fermentation room", "Packaging"],
+      packaging: "Vacuum-sealed traditional baskets",
+      description: "Traditional fermented cassava dessert with modern packaging. Sweet, slightly alcoholic. Cultural heritage product with premium twist.",
+      reasoning: "Traditional product with nostalgia appeal. Modern packaging extends shelf life. Both traditional and modern retail channels."
+    }
+  ]
+};
+
+export const commodityImages: Record<CommodityType, string> = {
+  corn: "https://images.unsplash.com/photo-1598533639123-ab55777ef8d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3JuJTIwc25hY2slMjBwcm9kdWN0fGVufDF8fHx8MTc3MTU4NDYxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+  seaweed: "https://images.unsplash.com/photo-1547514714-6a26e50ab07d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZWF3ZWVkJTIwb2NlYW58ZW58MXx8fHwxNzcxNTg0NjE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+  moringa: "https://images.unsplash.com/photo-1671778440118-4bc5eced58e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3JpbmdhJTIwdGVhJTIwbGVhdmVzfGVufDF8fHx8MTc3MTU4NDYxOHww&ixlib=rb-4.1.0&q=80&w=1080",
+  cocoa: "https://images.unsplash.com/photo-1634303316622-33b4d64f1f65?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2NvYSUyMGJlYW5zJTIwY2hvY29sYXRlfGVufDF8fHx8MTc3MTU4NDYxOHww&ixlib=rb-4.1.0&q=80&w=1080",
+  coffee: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBiZWFucyUyMHBsYW50fGVufDF8fHx8MTc3MTU4NDYxOHww&ixlib=rb-4.1.0&q=80&w=1080",
+  cassava: "https://images.unsplash.com/photo-1588566565463-180a5b2090d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXNzYXZhJTIwcm9vdHxlbnwxfHx8fDE3NzE1ODQ2MTl8MA&ixlib=rb-4.1.0&q=80&w=1080"
+};
